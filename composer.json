@@ -1,7 +1,7 @@
 {
     "require": {
-        "symfony/filesystem": "^6.3",
-        "symfony/http-client": "^6.3"
+        "symfony/filesystem": "^7.3",
+        "symfony/http-client": "^7.3"
     },
     "license": "MIT",
     "autoload": {

@@ -1,0 +1,23 @@
+{
+    "manifests": {
+        "ufo-tech/rpc-rest-adapter": {
+            "manifest": {
+                "bundles": {
+                    "Ufo\\RpcRestAdapter": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "  * RpcRestAdapter is ready."
+                ],
+                "env": {
+                }
+            },
+            "copy-from-package": {
+                "install/": "%CONFIG_DIR%/"
+            },
+            "files": [],
+            "ref": "4b15918d47bf69303c38a504a187fdb0d112d16f"
+        }
+    }
+}

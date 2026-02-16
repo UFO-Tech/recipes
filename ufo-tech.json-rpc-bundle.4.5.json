@@ -14,7 +14,8 @@
                     "install/": "%CONFIG_DIR%/"
                 },
                 "env": {
-                    "UFO_API_TOKEN": "%generate(secret)%"
+                    "UFO_API_TOKEN": "%generate(secret)%",
+                    "RPC_TRANSPORT_DSN": "doctrine://default?auto_setup=0"
                 }
             },
             "files": [],

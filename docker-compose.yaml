@@ -1,15 +1,14 @@
 version: "3"
 services:
+
   php:
     container_name: php_recipe
-    build:
-      context: ./
-      dockerfile: docker/configs/php/Dockerfile
-      args:
-        WORKDIR: srv/src/app
+    image: ufotech/php:8.4-fpm
+    working_dir: /app
     environment:
-      WORKDIR: /srv/src/app
+      WORKDIR: /app
       XDEBUG_CONFIG: remote_host={{YOUR_IP_ADDRESS}}
       PHP_IDE_CONFIG: serverName=docker
     volumes:
-      - ./:/srv/src/app
+      - ./:/app
+
