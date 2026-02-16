@@ -1,17 +1,31 @@
 {
+    "name": "ufo-tech/packages",
+    "description": "Configuration and runtime tools for UFO-Tech family libraries",
+    "version": "1.0.0",
+    "type": "component",
+    "license": "MIT",
+    "keywords": [
+        "ufo-tech",
+        "symfony",
+        "flex",
+        "recipes"
+    ],
+    "homepage": "https://github.com/UFO-Tech/recipes",
     "require": {
+        "php": "^8.4"
+    },
+    "require-dev": {
         "symfony/filesystem": "^7.3",
         "symfony/http-client": "^7.3"
     },
-    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "UfoTech\\Recipes\\": "src/"
+            "Ufo\\Packages\\": "src/"
         }
     },
     "authors": [
         {
-            "name": "Ashterix",
+            "name": "Alex Maistrenko",
             "email": "ashterix69@gmail.com"
         }
     ]

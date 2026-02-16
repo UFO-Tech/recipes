@@ -1,6 +1,6 @@
 <?php
 
-namespace UfoTech\Recipes;
+namespace Ufo\Packages\Recipes;
 
 class VersionTags
 {

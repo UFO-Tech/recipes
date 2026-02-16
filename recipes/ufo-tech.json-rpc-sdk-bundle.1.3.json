@@ -13,8 +13,7 @@
                 "copy-from-package": {
                     "install/": "%CONFIG_DIR%/"
                 },
-                "env": {
-                }
+                "env": {}
             },
             "files": [],
             "ref": "4b15918d47bf69303c38a504a187fdb0d112d16v"
