@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "ufo-tech/rpc-mercure-transport": {
+            "manifest": {
+                "bundles": {
+                    "Ufo\\RpcMercure\\RpcMercureBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "  * RpcMercureBundle is ready."
+                ],
+                "copy-from-package": {},
+                "env": {
+                    "MERCURE_URL": "http://localhost/.well-known/mercure",
+                    "MERCURE_PUBLIC_URL": "http://localhost/.well-known/mercure",
+                    "MERCURE_JWT_SECRET": "%generate(secret)%",
+                    "MERCURE_TOPIC_PREFIX": "mercure_user"
+                }
+            },
+            "files": [],
+            "ref": "4b15918d47bf69303c38a504a187fdb0d112d16m"
+        }
+    }
+}

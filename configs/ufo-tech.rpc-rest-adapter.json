@@ -10,8 +10,7 @@
                 "post-install-output": [
                     "  * RpcRestAdapter is ready."
                 ],
-                "env": {
-                }
+                "env": {}
             },
             "copy-from-package": {
                 "install/": "%CONFIG_DIR%/"
