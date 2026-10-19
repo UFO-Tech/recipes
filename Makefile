@@ -1,8 +1,11 @@
-.PHONY: up-d down exec composer-i composer-u generate commit-a
+.PHONY: up-d down exec composer composer-install composer-update composer-i composer-u generate check test commit-a
 
 DOCKER_COMPOSE = docker-compose
-PHP_BASH = docker exec -it php_recipe /bin/bash
-DOCKER_EXEC = $(PHP_BASH) -c
+CONTAINER = php_recipe
+# -t тільки в терміналі, щоб make check/test працювали і в скриптах
+TTY := $(shell [ -t 0 ] && echo -t)
+# GITHUB_TOKEN (якщо заданий) прокидається в контейнер для fallback на GitHub API
+DOCKER_EXEC = docker exec -i $(TTY) -e GITHUB_TOKEN $(CONTAINER) /bin/bash -c
 
 # Docker Compose Commands
 up-d:
@@ -15,8 +18,16 @@ down:
 exec:
 	$(DOCKER_EXEC) "echo -e '\033[32m'; /bin/bash"
 
+# Перегенерувати index.json і recipes/
 generate:
 	$(DOCKER_EXEC) "php bin/generate.php"
+
+# Нічого не пише; exit 1, якщо index.json/recipes/ застаріли
+check:
+	$(DOCKER_EXEC) "php bin/generate.php --check"
+
+test:
+	$(DOCKER_EXEC) "vendor/bin/phpunit"
 
 composer:
 	$(DOCKER_EXEC) "composer $(CMD)"
@@ -44,11 +55,6 @@ commit-a:
 	git tag $$TAG; \
 	git push origin $$TAG
 
-# Application Specific Commands
-console: setup
-	$(DOCKER_EXEC) "php bin/console $(EXEC)"
-
 # Це скидає будь-які аргументи передані до 'run', роблячи їх не-цілями
 %:
 	@:
-

@@ -7,19 +7,19 @@
                         "all"
                     ]
                 },
-                "post-install-output": [
-                    "  * UfoJsonRpcBundle is ready."
-                ],
                 "copy-from-package": {
                     "install/": "%CONFIG_DIR%/"
                 },
                 "env": {
                     "UFO_API_TOKEN": "%generate(secret)%",
                     "RPC_TRANSPORT_DSN": "doctrine://default?auto_setup=0"
-                }
+                },
+                "post-install-output": [
+                    "  * UfoJsonRpcBundle is ready."
+                ]
             },
             "files": [],
-            "ref": "4b15918d47bf69303c38a504a187fdb0d112d16v"
+            "ref": "45713184d126a1cd4156485a08ee414cb6f7310d"
         }
     }
 }

@@ -7,16 +7,15 @@
                         "all"
                     ]
                 },
+                "copy-from-package": {
+                    "install/": "%CONFIG_DIR%/"
+                },
                 "post-install-output": [
                     "  * RestBundle is ready."
-                ],
-                "env": {}
-            },
-            "copy-from-package": {
-                "install/": "%CONFIG_DIR%/"
+                ]
             },
             "files": [],
-            "ref": "4b15918d47bf69303c38a504a187fdb0d112d16f"
+            "ref": "568b0da4714ce0cb9c0178811863b266816e678e"
         }
     }
 }

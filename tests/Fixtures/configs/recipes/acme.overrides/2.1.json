@@ -1,0 +1,1 @@
+{"bundles": {"Acme\\Overrides\\AcmeBundle": ["all"]}, "env": {"LEVEL": "minor"}}

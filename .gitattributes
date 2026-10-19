@@ -1,0 +1,15 @@
+# Recipes and the generator are not part of the ufo-tech/packages dist archive.
+# configs/packages.php stays: UfoPackage reads it at runtime.
+/.gitattributes      export-ignore
+/.gitignore          export-ignore
+/bin                 export-ignore
+/configs/generator.php export-ignore
+/configs/recipes     export-ignore
+/docker-compose.yaml export-ignore
+/index.json          export-ignore
+/Makefile            export-ignore
+/phpunit.xml.dist    export-ignore
+/recipes             export-ignore
+/src/Recipes         export-ignore
+/tests               export-ignore
+/CLAUDE.md           export-ignore

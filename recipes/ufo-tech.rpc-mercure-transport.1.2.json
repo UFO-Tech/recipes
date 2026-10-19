@@ -7,19 +7,18 @@
                         "all"
                     ]
                 },
-                "post-install-output": [
-                    "  * RpcMercureBundle is ready."
-                ],
-                "copy-from-package": {},
                 "env": {
                     "MERCURE_URL": "http://localhost/.well-known/mercure",
                     "MERCURE_PUBLIC_URL": "http://localhost/.well-known/mercure",
                     "MERCURE_JWT_SECRET": "%generate(secret)%",
                     "MERCURE_TOPIC_PREFIX": "mercure_user"
-                }
+                },
+                "post-install-output": [
+                    "  * RpcMercureBundle is ready."
+                ]
             },
             "files": [],
-            "ref": "4b15918d47bf69303c38a504a187fdb0d112d16m"
+            "ref": "b7a994f3dcb2d77a8550b995ab869b1cba129061"
         }
     }
 }

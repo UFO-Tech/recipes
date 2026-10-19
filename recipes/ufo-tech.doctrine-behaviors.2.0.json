@@ -1,0 +1,18 @@
+{
+    "manifests": {
+        "ufo-tech/doctrine-behaviors": {
+            "manifest": {
+                "bundles": {
+                    "Ufo\\DoctrineBehaviors\\DoctrineBehaviorsBundle": [
+                        "all"
+                    ]
+                },
+                "post-install-output": [
+                    "  * DoctrineBehaviorsBundle is ready."
+                ]
+            },
+            "files": [],
+            "ref": "69bd34d265c89c92de76010990506b38d6b38212"
+        }
+    }
+}

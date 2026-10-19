@@ -1,0 +1,22 @@
+{
+    "manifests": {
+        "ufo-tech/kafka-messenger": {
+            "manifest": {
+                "bundles": {
+                    "Ufo\\KafkaMessenger\\UfoKafkaMessengerBundle": [
+                        "all"
+                    ]
+                },
+                "env": {
+                    "KAFKA_DSN": "kafka://localhost:9092"
+                },
+                "post-install-output": [
+                    "  * UfoKafkaMessengerBundle is ready.",
+                    "  * Configure a Messenger transport that uses KAFKA_DSN (requires ext-rdkafka)."
+                ]
+            },
+            "files": [],
+            "ref": "08b85b284e874950d8ccb751bc8029570aac75f1"
+        }
+    }
+}

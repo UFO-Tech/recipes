@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Ufo\\DoctrineBehaviors\\DoctrineBehaviorsBundle": ["all"]
+    },
+    "post-install-output": [
+        "  * DoctrineBehaviorsBundle is ready."
+    ]
+}

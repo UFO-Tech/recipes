@@ -1,30 +1,56 @@
 {
     "recipes": {
-        "ufo-tech/doctrine-eav-bundle": {
-            "0.5": "0.5"
-        },
-        "ufo-tech/json-rpc-bundle": {
-            "9.2": "9.2",
-            "9.1": "9.1",
-            "8.1": "8.1",
-            "7.6": "7.6",
-            "6.4": "6.4",
-            "5.2": "5.2",
-            "4.5": "4.5"
-        },
-        "ufo-tech/json-rpc-sdk-bundle": {
-            "3.1": "3.1",
-            "2.3": "2.3",
-            "1.3": "1.3"
-        },
-        "ufo-tech/rest-bundle": {
-            "1.0": "1.0"
-        },
-        "ufo-tech/rpc-mercure-transport": {
-            "1.1": "1.1",
-            "1.0": "1.0"
-        },
-        "ufo-tech/rpc-statistics-bundle": []
+        "ufo-tech/doctrine-behaviors": [
+            "1.0",
+            "2.0"
+        ],
+        "ufo-tech/doctrine-eav-bundle": [
+            "0.5"
+        ],
+        "ufo-tech/json-rpc-bundle": [
+            "4.5",
+            "5.2",
+            "6.4",
+            "7.0",
+            "7.1",
+            "7.2",
+            "7.3",
+            "7.4",
+            "7.5",
+            "7.6",
+            "8.0",
+            "8.1",
+            "9.0",
+            "9.1",
+            "9.2",
+            "10.0",
+            "10.1",
+            "10.2",
+            "10.3",
+            "10.4"
+        ],
+        "ufo-tech/json-rpc-sdk-bundle": [
+            "1.3",
+            "2.3",
+            "3.1",
+            "3.2",
+            "4.0"
+        ],
+        "ufo-tech/kafka-messenger": [
+            "1.0"
+        ],
+        "ufo-tech/mcp-bundle": [
+            "1.0"
+        ],
+        "ufo-tech/rest-bundle": [
+            "1.1",
+            "1.2"
+        ],
+        "ufo-tech/rpc-mercure-transport": [
+            "1.0",
+            "1.1",
+            "1.2"
+        ]
     },
     "branch": "main",
     "is_contrib": true,

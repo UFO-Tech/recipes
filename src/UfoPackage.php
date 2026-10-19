@@ -55,7 +55,7 @@ class UfoPackage
     public static function description(): string
     {
         $self = static::getInstance(static::class);
-        return $self->description;
+        return $self->description ?? static::UFO_DESCRIPTION;
     }
 
     protected function parsePackages(): void

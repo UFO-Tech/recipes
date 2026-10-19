@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Ufo\\EAV\\UfoEAVBundle": ["all"]
+    },
+    "post-install-output": [
+        "  * UfoEAVBundle is ready."
+    ]
+}

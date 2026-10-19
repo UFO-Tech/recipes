@@ -1,7 +1,6 @@
 {
     "name": "ufo-tech/packages",
     "description": "Configuration and runtime tools for UFO-Tech family libraries",
-    "version": "1.0.0",
     "type": "component",
     "license": "MIT",
     "keywords": [
@@ -12,15 +11,22 @@
     ],
     "homepage": "https://github.com/UFO-Tech/recipes",
     "require": {
-        "php": "^8.4"
+        "php": "^8.4",
+        "composer-runtime-api": "^2"
     },
     "require-dev": {
         "symfony/filesystem": "^7.3",
-        "symfony/http-client": "^7.3"
+        "symfony/http-client": "^7.3",
+        "phpunit/phpunit": "^12"
     },
     "autoload": {
         "psr-4": {
             "Ufo\\Packages\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ufo\\Packages\\Tests\\": "tests/"
         }
     },
     "authors": [

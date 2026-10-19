@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Ufo\\KafkaMessenger\\UfoKafkaMessengerBundle": ["all"]
+    },
+    "env": {
+        "KAFKA_DSN": "kafka://localhost:9092"
+    },
+    "post-install-output": [
+        "  * UfoKafkaMessengerBundle is ready.",
+        "  * Configure a Messenger transport that uses KAFKA_DSN (requires ext-rdkafka)."
+    ]
+}

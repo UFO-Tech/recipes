@@ -1,0 +1,11 @@
+{
+    "bundles": {
+        "Ufo\\RestBundle\\RestBundleBundle": ["all"]
+    },
+    "copy-from-package": {
+        "install/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * RestBundle is ready."
+    ]
+}

@@ -7,16 +7,22 @@
                         "all"
                     ]
                 },
-                "post-install-output": [
-                    "  * JsonRpcSdkBundle is ready."
-                ],
                 "copy-from-package": {
                     "install/": "%CONFIG_DIR%/"
                 },
-                "env": {}
+                "env": {
+                    "VENDOR_1_API_HOST": "http://localhost/rpc",
+                    "VENDOR_1_API_KEY": "Ufo-RPC-Token",
+                    "VENDOR_1_API_TOKEN": "",
+                    "VENDOR_ASYNC_SECRET": ""
+                },
+                "post-install-output": [
+                    "  * JsonRpcSdkBundle is ready.",
+                    "  * Configure vendors in config/packages/json_rpc_sdk.yaml and VENDOR_* in .env.local"
+                ]
             },
             "files": [],
-            "ref": "4b15918d47bf69303c38a504a187fdb0d112d16v"
+            "ref": "409c0ce5159f82e9e59c92f142fccddcc9145a87"
         }
     }
 }

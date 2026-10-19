@@ -1,0 +1,12 @@
+{
+    "bundles": {
+        "Ufo\\McpBundle\\UfoMcpBundle": ["all"]
+    },
+    "copy-from-package": {
+        "install/": "%CONFIG_DIR%/"
+    },
+    "post-install-output": [
+        "  * UfoMcpBundle is ready: MCP endpoint is mounted at /mcp.",
+        "  * Set mcp_server_info in config/packages/ufo_mcp.yaml."
+    ]
+}

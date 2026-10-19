@@ -1,20 +1,18 @@
 {
     "manifests": {
-        "ufo-tech/json-rpc-bundle": {
+        "ufo-tech/doctrine-eav-bundle": {
             "manifest": {
                 "bundles": {
-                    "Ufo\\EAV\\UfoEavBundle": [
+                    "Ufo\\EAV\\UfoEAVBundle": [
                         "all"
                     ]
                 },
                 "post-install-output": [
-                    "  * UfoEavBundle is ready."
-                ],
-                "env": {
-                }
+                    "  * UfoEAVBundle is ready."
+                ]
             },
             "files": [],
-            "ref": "4b15918d47bf69303c38a504a187fdb0d112d16v"
+            "ref": "54338e6925b4803ebf1ba1e4abec73d75b954f48"
         }
     }
 }

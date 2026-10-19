@@ -2,24 +2,35 @@
 
 namespace Ufo\Packages\Recipes;
 
+use function array_keys;
+use function preg_match;
+use function str_starts_with;
+use function usort;
+use function version_compare;
+
 class VersionTags
 {
-    protected array $versions = [];
-    public function __construct(array $tags)
-    {
-        foreach ($tags as $tag) {
-            $semVer = explode('.', $tag['name']);
-            if (count($semVer) < 3) continue;
-            $ver = $semVer[0] . '.' . $semVer[1];
-            $this->versions[$ver] ??= $ver;
-        }
-    }
-
     /**
-     * @return array
+     * Collapses release versions/tags to unique X.Y minors sorted ascending —
+     * Flex walks the index in reverse and takes the first minor <= installed version.
+     *
+     * @param string[] $versions e.g. ['1.2.3', 'v1.3.0', '5.2', '2.0.0-beta1']
+     * @return string[]
      */
-    public function getVersions(): array
+    public static function minors(array $versions, bool $prerelease = false, ?string $minVersion = null): array
     {
-        return $this->versions;
+        $minors = [];
+        foreach ($versions as $version) {
+            if (!preg_match('/^v?(\d+)\.(\d+)(?:\.\d+){0,2}(?<suffix>.*)$/i', $version, $m)) continue;
+            $isPrerelease = $m['suffix'] !== '' && !str_starts_with($m['suffix'], '+');
+            if ($isPrerelease && !$prerelease) continue;
+            $minor = $m[1] . '.' . $m[2];
+            if ($minVersion !== null && version_compare($minor, $minVersion, '<')) continue;
+            $minors[$minor] = true;
+        }
+        $minors = array_keys($minors);
+        usort($minors, 'version_compare');
+
+        return $minors;
     }
 }

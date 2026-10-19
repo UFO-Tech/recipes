@@ -1,0 +1,14 @@
+{
+    "bundles": {
+        "Ufo\\RpcMercure\\RpcMercureBundle": ["all"]
+    },
+    "env": {
+        "MERCURE_URL": "http://localhost/.well-known/mercure",
+        "MERCURE_PUBLIC_URL": "http://localhost/.well-known/mercure",
+        "MERCURE_JWT_SECRET": "%generate(secret)%",
+        "MERCURE_TOPIC_PREFIX": "mercure_user"
+    },
+    "post-install-output": [
+        "  * RpcMercureBundle is ready."
+    ]
+}

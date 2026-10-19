@@ -1,3 +1,6 @@
 /.idea
 .idea
 /vendor/
+/.features/
+/.phpunit.result.cache
+/.phpunit.cache/

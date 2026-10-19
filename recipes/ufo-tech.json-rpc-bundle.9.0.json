@@ -1,0 +1,25 @@
+{
+    "manifests": {
+        "ufo-tech/json-rpc-bundle": {
+            "manifest": {
+                "bundles": {
+                    "Ufo\\JsonRpcBundle\\UfoJsonRpcBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-package": {
+                    "install/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "UFO_API_TOKEN": "%generate(secret)%",
+                    "RPC_TRANSPORT_DSN": "doctrine://default?auto_setup=0"
+                },
+                "post-install-output": [
+                    "  * UfoJsonRpcBundle is ready."
+                ]
+            },
+            "files": [],
+            "ref": "45713184d126a1cd4156485a08ee414cb6f7310d"
+        }
+    }
+}
